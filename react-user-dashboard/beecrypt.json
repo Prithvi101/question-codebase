@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "id": "react-user-dashboard-v1",
+  "title": "React User Management Dashboard",
+  "description": "A React and TypeScript user management dashboard with search functionality, detail editing, and dynamic filtering. It contains memory leak/infinite render loop bugs, search case sensitivity problems, and invalid email validation forms.",
+  "category": "frontend",
+  "framework": "React",
+  "difficulty": "mid",
+  "duration": 90,
+  "tags": [
+    "react",
+    "typescript",
+    "useeffect",
+    "validation",
+    "debugging"
+  ],
+  "aiEnabled": true,
+  "setup": {
+    "install": "npm install",
+    "start": "npm start",
+    "test": "npm run test"
+  },
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Fix Infinite Render Loop in User Fetching",
+      "description": "The dashboard component triggers an infinite render loop when fetching users from the API simulation in useEffect. Correct the dependency array or fetch handling.",
+      "points": 20,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_2",
+      "title": "Fix Case-Insensitive Search",
+      "description": "The search function currently only displays matches when candidates search for exact case-sensitive matches of user names (e.g. 'John' works, but 'john' or 'JOHN' fails). Update it to be case-insensitive.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_3",
+      "title": "Add Edit Email Validation Check",
+      "description": "The profile editing form currently allows any string to be set as the user's email. Add validation to reject the save action and display 'Invalid email address' if the value does not match a valid email pattern (containing @ and .).",
+      "points": 20,
+      "estimatedMinutes": 15
+    },
+    {
+      "id": "task_4",
+      "title": "Implement Empty State UI for Filtering",
+      "description": "When search queries yield no results, the dashboard continues to display an empty table. Update it to show a clear 'No users found matching that search' empty state screen.",
+      "points": 15,
+      "estimatedMinutes": 10
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "id": "node-url-shortener-v1",
+  "title": "Node.js URL Shortener API",
+  "description": "A backend REST API built with Node.js, Express, and TypeScript. The application contains bugs in its URL format validator, redirects, analytics collection race conditions, and misses a basic rate-limiting middleware.",
+  "category": "backend",
+  "framework": "Express",
+  "difficulty": "mid",
+  "duration": 90,
+  "tags": [
+    "nodejs",
+    "express",
+    "typescript",
+    "validation",
+    "middleware"
+  ],
+  "aiEnabled": true,
+  "setup": {
+    "install": "npm install",
+    "start": "npm run dev",
+    "test": "npm run test"
+  },
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Fix URL Regex Validation Pattern",
+      "description": "The URL input validation regex rejects valid URLs or accepts malformed URLs (e.g., missing scheme). Fix the validation logic to reject inputs that are not valid absolute HTTP/HTTPS URLs.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_2",
+      "title": "Fix Redirect Location Headers",
+      "description": "The redirect endpoint GET /:code currently returns a status code of 200 or fails to set the correct Location headers, causing clients not to redirect. Fix this to redirect with a proper 302 Found status.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_3",
+      "title": "Fix Concurrent Analytics Counters",
+      "description": "When multiple requests access the redirect code, the analytics counter updates incorrectly due to mutating state variables sequentially. Resolve the analytical update logic to safely track hit counts.",
+      "points": 20,
+      "estimatedMinutes": 20
+    },
+    {
+      "id": "task_4",
+      "title": "Implement Client IP Rate Limiting",
+      "description": "Implement a custom rate-limiting middleware for POST /shorten that limits requests to 5 requests per minute per IP address. Return a 429 Too Many Requests response if exceeded.",
+      "points": 30,
+      "estimatedMinutes": 30
+    }
+  ]
+}

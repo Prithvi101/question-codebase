@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "id": "fastapi-todo-api-v1",
+  "title": "FastAPI Todo API",
+  "description": "A backend REST API built with FastAPI that manages a task list. The application has validation issues, wrong HTTP response status codes, and incomplete query filtering features.",
+  "category": "backend",
+  "framework": "FastAPI",
+  "difficulty": "mid",
+  "duration": 60,
+  "tags": [
+    "python",
+    "fastapi",
+    "rest-api",
+    "validation",
+    "debugging"
+  ],
+  "aiEnabled": true,
+  "setup": {
+    "install": "pip install -r requirements.txt",
+    "start": "uvicorn app.main:app --reload",
+    "test": "pytest"
+  },
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Fix Task Title Input Validation",
+      "description": "Ensure the title of a task is required, cannot be empty or whitespaces only, and cannot exceed 100 characters. Return 422 Unprocessable Entity for invalid inputs.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_2",
+      "title": "Fix Status Update Handler",
+      "description": "Updating a task's status (completed) currently crashes with a KeyError or Server Error due to referencing the wrong key in the mock database structure. Fix this logic in the PUT endpoint.",
+      "points": 20,
+      "estimatedMinutes": 15
+    },
+    {
+      "id": "task_3",
+      "title": "Implement Completed Filter",
+      "description": "Support filtering tasks by completion status in the list endpoint. `GET /tasks?completed=true` or `GET /tasks?completed=false` should return only matched tasks. If the parameter is not provided, return all.",
+      "points": 20,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_4",
+      "title": "Fix Deleting Non-Existent Tasks Error Response",
+      "description": "When a client requests to delete a task that does not exist, the API currently throws an unhandled server error. Update it to return a clear 404 Not Found response.",
+      "points": 15,
+      "estimatedMinutes": 10
+    }
+  ]
+}

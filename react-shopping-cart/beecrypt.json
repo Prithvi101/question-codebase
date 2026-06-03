@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "id": "react-shopping-cart-v1",
+  "title": "React Shopping Cart Dashboard",
+  "description": "A React application representing a dynamic shopping cart. The code contains issues with state updates, item totals, component rendering warnings, and promotional codes.",
+  "category": "frontend",
+  "framework": "React",
+  "difficulty": "mid",
+  "duration": 60,
+  "tags": [
+    "react",
+    "javascript",
+    "state-management",
+    "hooks",
+    "debugging"
+  ],
+  "aiEnabled": true,
+  "setup": {
+    "install": "npm install",
+    "start": "npm start",
+    "test": "npm run test"
+  },
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Fix Quantity Updates (Boundary Check)",
+      "description": "Ensure that the item quantity in the cart cannot go below 1, and that decrementing the quantity properly updates the state without removing items unless explicitly removed.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_2",
+      "title": "Fix Cart Total and Subtotal Logic",
+      "description": "The cart total calculations fail to correctly apply tax (8%) or subtotal accumulation when items change. Fix the calculation inside the useMemo block.",
+      "points": 20,
+      "estimatedMinutes": 15
+    },
+    {
+      "id": "task_3",
+      "title": "Fix List Unique Key Warnings",
+      "description": "Fix the console errors warning about missing unique keys when rendering the list of cart items in the dashboard.",
+      "points": 10,
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "task_4",
+      "title": "Implement Promo Code logic",
+      "description": "Implement the promo code verification system. When a user applies 'BEE10', apply a 10% discount to the subtotal before tax is calculated. If an invalid code is input, show a 'Promo code invalid' error.",
+      "points": 25,
+      "estimatedMinutes": 20
+    }
+  ]
+}
