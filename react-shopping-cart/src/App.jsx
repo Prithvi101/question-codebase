@@ -16,8 +16,9 @@ export default function App() {
     setCartItems(
       cartItems.map((item) => {
         if (item.id === id) {
-          // BUG: Quantity boundary check is missing/broken. Can go below 1.
-          return { ...item, quantity: item.quantity + delta };
+          const newQty = item.quantity + delta;
+          // Ensure quantity never drops below 1
+          return { ...item, quantity: newQty < 1 ? 1 : newQty };
         }
         return item;
       })
@@ -30,13 +31,13 @@ export default function App() {
 
   // Calculations
   const { subtotal, discount, tax, total } = useMemo(() => {
-    // BUG: Only accumulates item.price, ignores item.quantity!
-    const sub = cartItems.reduce((acc, item) => acc + item.price, 0);
+    // Correct subtotal: price * quantity for each item
+    const sub = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     const disc = appliedPromo === 'BEE10' ? sub * 0.1 : 0;
     
-    // BUG: Tax is calculated on subtotal before discount. Should be 8% of (subtotal - discount).
-    const calculatedTax = sub * 0.08;
+    // Tax should be 8% of (subtotal - discount)
+    const calculatedTax = (sub - disc) * 0.08;
 
     return {
       subtotal: sub,
@@ -48,17 +49,16 @@ export default function App() {
 
   const handleApplyPromo = (e) => {
     e.preventDefault();
-    if (promoInput === '') {
+    if (promoInput.trim() === '') {
+      // Empty input clears any applied promo and error
       setAppliedPromo('');
-      // BUG: Should clear error on empty submit, but sets it instead.
-      setPromoError('Promo code invalid');
-    } else if (promoInput === 'BEE10') {
+      setPromoError('');
+    } else if (promoInput.trim() === 'BEE10') {
       setAppliedPromo('BEE10');
       setPromoError('');
     } else {
       setAppliedPromo('');
-      // BUG: Fails to set "Promo code invalid" error message.
-      setPromoError('');
+      setPromoError('Promo code invalid');
     }
   };
 
@@ -72,8 +72,8 @@ export default function App() {
             <p>Your cart is empty.</p>
           ) : (
             cartItems.map((item) => (
-              // BUG: Missing unique key prop here!
-              <div className="cart-item" style={{ borderBottom: '1px solid #ccc', padding: '10px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              // Added unique key prop
+              <div key={item.id} className="cart-item" style={{ borderBottom: '1px solid #ccc', padding: '10px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
                   <h3 style={{ margin: 0 }}>{item.name}</h3>
                   <span style={{ color: '#666' }}>${item.price.toFixed(2)} each</span>
