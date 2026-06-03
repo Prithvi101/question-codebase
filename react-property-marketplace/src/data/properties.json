@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Luxury Modern Villa",
+    "location": "Mumbai, India",
+    "price": "$4,500",
+    "rating": 4.8,
+    "type": "Villa",
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+    "description": "An exquisite luxury villa nestled in the elite neighborhood of Mumbai. Boasting premium architecture, a private infinity pool, a sprawling garden, and automated smart-home systems.",
+    "features": ["4 Beds", "4.5 Baths", "4,200 sqft", "Pool", "Smart Home", "Gym"]
+  },
+  {
+    "id": 2,
+    "title": "Cozy Beachfront Cabin",
+    "location": "Goa, India",
+    "price": "$1,200",
+    "rating": 4.5,
+    "type": "Cabin",
+    "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=80",
+    "description": "Wake up to the sound of waves in this cozy beachfront cabin. Steps away from the white sands of South Goa, it offers high-speed WiFi, beach access, and an outdoor patio perfect for sunset views.",
+    "features": ["2 Beds", "1 Bath", "900 sqft", "Beach Access", "Patio", "Wifi"]
+  },
+  {
+    "id": 3,
+    "title": "Minimalist Loft Apartment",
+    "location": "Bangalore, India",
+    "price": "$950",
+    "rating": 4.2,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+    "description": "A chic, minimalist loft situated in Bangalore's tech hub. Features high ceilings, industrial floor-to-ceiling windows, open-concept living, and walking distance to cafes and workspace hubs.",
+    "features": ["1 Bed", "1.5 Baths", "750 sqft", "Workspace", "Metro Access", "Kitchen"]
+  },
+  {
+    "id": 4,
+    "title": "Skyline Luxury Penthouse",
+    "location": "Mumbai, India",
+    "price": "$8,500",
+    "rating": 4.9,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "description": "Experience peak urban living in this stunning double-story penthouse. Offers panoramic views of the Mumbai skyline, a private rooftop deck, 24/7 concierge, and bespoke Italian furnishings.",
+    "features": ["5 Beds", "6 Baths", "6,000 sqft", "Rooftop Deck", "Concierge", "Elevator"]
+  },
+  {
+    "id": 5,
+    "title": "Rustic Forest Cottage",
+    "location": "Manali, India",
+    "price": "$850",
+    "rating": 4.6,
+    "type": "Cabin",
+    "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80",
+    "description": "Tucked away in the cedar forests of Manali, this rustic cottage is a perfect mountain retreat. Enjoy cozy evenings by the fireplace, stunning Himalayan mountain views, and nearby hiking trails.",
+    "features": ["3 Beds", "2 Baths", "1,800 sqft", "Fireplace", "Mountain View", "Hiking Trails"]
+  },
+  {
+    "id": 6,
+    "title": "Chic Studio Apartment",
+    "location": "Pune, India",
+    "price": "$700",
+    "rating": 3.9,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+    "description": "A stylish, space-optimized studio apartment in the lively student and IT district of Pune. Features custom storage, modern appliances, and access to a shared rooftop terrace.",
+    "features": ["1 Bath", "450 sqft", "AC", "Rooftop Terrace", "Security", "Laundry"]
+  },
+  {
+    "id": 7,
+    "title": "Heritage Garden House",
+    "location": "Jaipur, India",
+    "price": "$1,800",
+    "rating": 4.7,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+    "description": "Immerse yourself in Rajasthani history with this beautifully restored garden house in Jaipur. Featuring traditional stone archways, a private courtyard, lush gardens, and vintage furnishings.",
+    "features": ["3 Beds", "3 Baths", "2,500 sqft", "Private Garden", "Courtyard", "Vintage Decor"]
+  },
+  {
+    "id": 8,
+    "title": "Modern Downtown Loft",
+    "location": "Delhi, India",
+    "price": "$1,100",
+    "rating": 4.0,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
+    "description": "A modern and spacious loft in downtown Delhi. Features raw brick accents, open layout, close proximity to restaurants and shopping plazas, and excellent metro connectivity.",
+    "features": ["2 Beds", "2 Baths", "1,200 sqft", "Metro Access", "Balcony", "Parking"]
+  },
+  {
+    "id": 9,
+    "title": "Budget Shared Studio",
+    "location": "Mumbai, India",
+    "price": "$350",
+    "rating": 2.8,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    "description": "Affordable shared studio apartment close to university hubs in Mumbai. Clean spaces, basic utilities, and a community lounge. Ideal for students on a tight budget.",
+    "features": ["1 Bed (Shared)", "1 Bath", "350 sqft", "Wifi", "Kitchenette", "Laundry"]
+  }
+]

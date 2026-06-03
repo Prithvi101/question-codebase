@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "id": "react-property-marketplace-v1",
+  "title": "React Property Marketplace Assessment",
+  "description": "A property marketplace application where candidates need to fix issues with numeric price sorting, rating sorting, case-sensitive/exact-match search, and favorites list persistence. There is also a bonus task to implement a minimum rating filter.",
+  "category": "frontend",
+  "framework": "React",
+  "difficulty": "mid",
+  "duration": 90,
+  "tags": [
+    "react",
+    "typescript",
+    "sorting",
+    "search",
+    "localstorage",
+    "filtering"
+  ],
+  "aiEnabled": true,
+  "setup": {
+    "install": "npm install",
+    "start": "npm start",
+    "test": "npm run test"
+  },
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Fix Broken Price Sorting",
+      "description": "Price sorting is currently alphabetically comparing price strings (e.g. '$1,200' sorts before '$950'). Modify the sorting logic to extract numeric values and sort properties correctly by their numeric price.",
+      "points": 25,
+      "estimatedMinutes": 15
+    },
+    {
+      "id": "task_2",
+      "title": "Add Rating Sorting",
+      "description": "The dropdown sort option 'Sort by Rating' currently does nothing. Implement rating sorting to sort properties in descending order (highest rated first) when selected.",
+      "points": 20,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_3",
+      "title": "Fix Search Functionality",
+      "description": "Search is currently case-sensitive and does not match locations or support partial matches. Implement a case-insensitive search that matches both property title and location, and supports partial string matches.",
+      "points": 25,
+      "estimatedMinutes": 15
+    },
+    {
+      "id": "task_4",
+      "title": "Fix Favorites Persistence",
+      "description": "Favorites currently disappear upon page reload. Update the application to persist the favorited property IDs using localStorage.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_5",
+      "title": "Add Minimum Rating Filter",
+      "description": "Add a minimum rating filter dropdown/select component to allow filtering properties. Options should include: 1+, 2+, 3+, 4+, and 5+. Only show properties with ratings greater than or equal to the selected value.",
+      "points": 15,
+      "estimatedMinutes": 15
+    }
+  ]
+}
