@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "id": "express-auth-api-v1",
+  "title": "Backend Authentication API",
+  "description": "A Node.js/Express API that handles user authentication. The system contains several bugs, security vulnerabilities, and incomplete features that need to be resolved.",
+  "category": "backend",
+  "framework": "Express",
+  "difficulty": "mid",
+  "duration": 90,
+  "tags": [
+    "nodejs",
+    "express",
+    "authentication",
+    "security",
+    "debugging"
+  ],
+  "aiEnabled": true,
+  "setup": {
+    "install": "npm install",
+    "start": "npm run dev",
+    "test": "npm run test"
+  },
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Fix Data Leak in User Profile",
+      "description": "The GET /api/users/profile endpoint currently returns the user's password hash. Update the controller to omit sensitive fields.",
+      "points": 10,
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "task_2",
+      "title": "Fix Password Verification",
+      "description": "Users are unable to log in even with correct credentials. Fix the password comparison logic in the login controller.",
+      "points": 20,
+      "estimatedMinutes": 15
+    },
+    {
+      "id": "task_3",
+      "title": "Improve Token Validation Error Handling",
+      "description": "The authentication middleware crashes the server (500 Error) when an expired JWT is provided. Update it to return a clean 401 Unauthorized response instead.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_4",
+      "title": "Include Role in JWT Payload",
+      "description": "The login token generation is missing the user's role. Ensure the role is included in the JWT payload so the frontend can read it.",
+      "points": 15,
+      "estimatedMinutes": 10
+    },
+    {
+      "id": "task_5",
+      "title": "Implement Role-Based Access Control",
+      "description": "The GET /api/admin/dashboard endpoint is currently accessible by any authenticated user. Implement a middleware to restrict access only to users with the 'ADMIN' role.",
+      "points": 20,
+      "estimatedMinutes": 20
+    },
+    {
+      "id": "task_6",
+      "title": "Implement Token Refresh",
+      "description": "Implement the POST /api/auth/refresh endpoint to issue a new access token when provided with a valid refresh token.",
+      "points": 20,
+      "estimatedMinutes": 30
+    }
+  ]
+}
